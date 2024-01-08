@@ -1,0 +1,94 @@
+@import '../../css-config/mixins.scss';
+
+.main_product{
+    .container{
+        .ProductImg{
+            background-color: transparent;
+            padding: 0 3rem;
+            border-radius: 20px;
+
+            img{
+                width: 400px;
+                mix-blend-mode: color-burn;
+            }
+        }
+        .ProductContainer{
+            .CountSection{
+                
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                @include x300{
+                    width: 100%;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                @include xl1{
+                    flex-direction: row;
+                }
+                @include xl2{
+                    flex-direction: row;
+                }
+                @include xl3{
+                    flex-direction: row;
+                }
+                @include laptops{
+                    flex-direction: row;
+                }
+                
+                @include tablets{
+                    flex-direction: row;
+                }
+                @include mini-tablet{
+                    flex-direction: row;
+                }
+                @include x560{
+                    flex-direction: row;
+                }
+
+                .ItemCount{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    @include x480{
+                        gap: 10px;
+                    }
+                    @include x392{
+                        gap: 5px;
+                    }
+                    @include x300{
+                        gap: 10px;
+                        justify-content: space-between;
+                        
+                    }
+                    
+                    button{
+                        font-size: 1.5rem;
+                        background-color: rgb(227, 227, 227);
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0.5rem;
+                        @include x300{
+                            align-items: center;
+                        }
+                    }
+                    .inputCount{
+                        border-radius: 10px;
+                        border: 0.01px solid rgb(194, 193, 193);
+                        width: 90px;
+                        height: 60px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                       text-align: center;
+                       font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,220 @@
+@import '../../css-config/mixins.scss';
+
+.category-main-content{
+    .category-title{
+        display: flex;
+        align-items: center;
+        
+        margin: 50px 0 10px 0px;
+        span{
+            text-transform: uppercase;
+            color: #3e4152;
+            letter-spacing: .15em;
+            font-size: 1.8em;
+            margin: 50px 0 10px 0px;
+            max-height: 5em;
+            font-weight: 700;
+            text-align: center;
+            // &:after{
+            //     content: '';
+            //     display: block;
+            //     margin-top: 10px;
+            //     width: 100%;
+            //     height: 1px;
+            //     background-color: #cacaca;
+            // }
+        }
+    }
+    .filtersContainer{
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        @include sm{
+            display: none;
+        }
+       
+      
+        
+        .filterLabel{
+            font-size: 20px;
+            padding: 10px 0;
+            color: rgba(0,0,0,0.8);
+        }
+        .filters{
+            select {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                padding: 8px;
+                @include tablets{
+                    padding: 4px;
+                }
+                font-size: 16px;
+                width: 200px;
+              
+                &::-ms-expand {
+                  display: none; /* Remove the arrow in IE */
+                }
+              
+                &:focus {
+                  outline: none;
+                }
+              
+                &:hover {
+                  border-color: #333;
+                }
+              
+                option:checked {
+                  background-color: #007bff;
+                  color: #fff;
+                }
+              }
+            .slider{
+                width: 200px;
+                height: 2px;
+                background-color: #cdd9ed;
+                margin-top: 20px;
+            }
+            .slider .thumb{
+                width: 23px;
+                height: 23px;
+                cursor: grab;
+                background: #dad8d8;
+                border-radius: 50%;
+                border: 2px solid #cccaca;
+                top: -10px;
+            }
+            .track-1{
+                background: #5d5d5d;
+            }
+            
+        }
+    }
+    .filtersContainerModal{
+        position: absolute;
+        display: block;
+        z-index: 5000;
+        right: 0;
+        top: 0;
+        padding: 1rem;
+        color: rgb(0, 0, 0);
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(91, 91, 91, 0.3);
+        @include xs{
+          top: 120px;
+        }
+        
+        @include sm{
+            display: block;
+        }
+        
+        .filters{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 20px;
+            select {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-color: rgba(201, 199, 199, 0.1);
+                border: 1px solid #ccc;
+                padding: 8px;
+                @include tablets{
+                    padding: 4px;
+                }
+                font-size: 16px;
+                width: 200px;
+              
+                &::-ms-expand {
+                  display: none; /* Remove the arrow in IE */
+                }
+              
+                &:focus {
+                  outline: none;
+                }
+              
+                &:hover {
+                  border-color: #333;
+                }
+              
+                option {
+                  background-color: #f2efef;
+                  color: #000000;
+                }
+              }
+            .slider{
+                width: 200px;
+                height: 2px;
+                background-color: #cdd9ed;
+                margin-top: 20px;
+            }
+            .slider .thumb{
+                width: 23px;
+                height: 23px;
+                cursor: grab;
+                background: #dad8d8;
+                border-radius: 50%;
+                border: 2px solid #cccaca;
+                top: -10px;
+            }
+            .track-1{
+                background: #5d5d5d;
+            }
+            
+        }
+        
+
+    }
+    
+    
+}
+.BrandWise{
+
+  .filterLabel{
+    font-size: 20px;
+    padding: 10px 0;
+    color: rgba(0,0,0,0.8);
+  }
+  .filters{
+    select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 8px;
+        @include tablets{
+            padding: 4px;
+        }
+        font-size: 16px;
+        width: 200px;
+      
+        &::-ms-expand {
+          display: none; /* Remove the arrow in IE */
+        }
+      
+        &:focus {
+          outline: none;
+        }
+      
+        &:hover {
+          border-color: #333;
+        }
+      
+        option:checked {
+          background-color: #007bff;
+          color: #fff;
+        }
+      }
+    
+    
+  }
+}

@@ -1,0 +1,34 @@
+
+@import './css-config/mixins.scss';
+.MainApp{
+    padding: 0 4rem;
+    overflow: hidden;
+    @include xl3{
+        padding: 0 4rem;
+    }
+    @include xl2{
+        padding: 0 2rem;
+    }
+    @include laptops{
+        padding: 0 2rem;
+    }
+    @include tablets{
+        padding: 0 2rem;
+    }
+    @include mini-tablet{
+        padding: 0 2rem;
+    }
+    @include x560{
+        padding: 0 1.5rem;
+    }
+    @include x480{
+        padding: 0 1.3rem;
+    }
+    @include x392{
+        padding: 0 1rem;
+    }
+    @include x300{
+        padding: 0 1rem;
+    }
+    
+}

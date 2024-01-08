@@ -1,0 +1,99 @@
+@import '../css-config/mixins.scss';
+.MainContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    .opacLayer{
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .container{
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: 20px;
+        top:2rem;
+         width: 100%;
+        height: 100%;
+        background: white;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+       
+        width: 800px;
+        background-color: rgb(255, 255, 255);
+        animation: openModal 0.2s ease-in-out;
+    
+        .success-msg{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 100%;
+
+            h1{
+                font-size: 1.5rem;
+                @include sm{
+                    font-size: 1rem;
+                }
+               
+            }
+            .Thanks{
+                padding: 0 30px;
+            }
+            button{
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 24px;
+                background-color: rgb(27, 27, 162);
+                color: white;
+                padding: 0.5rem 2rem;
+                border-radius: 10px;
+                font-size: 20px;
+            }
+            button.ChangeBg{
+                background-color: rgb(118, 118, 118);
+            }
+            .help{
+                width: 600px;
+                padding: 0 10px;
+                @include sm{
+                width: 300px;
+                }
+                @include xxs2{
+                    padding: 0 30px;
+                }
+            }
+            .orderPlaced{
+                display: flex; align-items: center; justify-content: center; gap: 20px;
+                span{
+                    font-size: 1.5rem;
+                }
+                @include xxs2{
+                    font-size: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+}
+
+}
+@keyframes openModal {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

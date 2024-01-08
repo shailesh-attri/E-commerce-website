@@ -1,0 +1,189 @@
+@import '../../css-config/mixins.scss';
+.search-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1002;
+    top: 0;
+    left: 0;
+    background-color: white;
+    transform: translateY(100%);
+    animation: slideSearchWindow 0.5s ease forwards;
+    .form-field {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        padding: 20px 50px;
+        height: 120px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        position: relative;
+        
+        @include md{
+            height: 80px;
+        }
+        h1{
+            font-size: 50px;
+            font-weight: 800;
+            color: rgb(95, 95, 95);
+            outline: none;
+            border: none;
+            @include md{
+                font-size: 30px;
+            }
+            @include xxs{
+                font-size: 20px;
+            }
+           
+        }
+        .close-btn {
+            position: absolute;
+            font-size: 40px;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            @include md {
+                right: 40px;
+                font-size: 30px;
+            }
+        }
+    }
+    .search-result-content {
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        
+        @include tablets {
+            max-width: 800px;
+        }
+        .start-msg {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .search-results {
+            height: calc(100vh - 110px);
+            overflow: auto;
+            margin: 20px 0;
+            
+            @include tablets {
+                height: calc(100vh - 160px);
+            }
+            .search-result-item {
+                
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                gap: 15px;
+                padding: 20px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+                .image-container {
+                    background-color: rgba(0, 0, 0, 0.05);
+                    width: 120px;
+                    height: 120px;
+                    flex-shrink: 0;
+                    @include xxs{
+                        width: 60px;
+                        height: 60px;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .prod-details {
+                    overflow: hidden;
+                    h1{
+                        font-size: 1rem;
+                        @include xxs{
+                            font-size: 0.2rem;
+                        }
+                    }
+                    .leading-relaxed{
+                        @include xxs{
+                            font-size: 0.8rem;
+                        }
+                    }
+                    .wishListItem{
+                        @include xxs{
+                            font-size: 1.2rem;
+                        }
+                    }
+                    .PriceContainer{
+                        span{
+                            font-size: 25px;
+                            @include xxs{
+                                font-size: 20px;
+                            }
+                        }
+                        s{
+                            font-size: 15px;
+                            @include xxs{
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                    .ViewProduct{
+                        @include xxs{
+                            display: none;
+                        }
+                    }
+                    .view{
+                        display: none;
+                        @include xxs{
+                            display: block;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideSearchWindow {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.search-results::-webkit-scrollbar {
+    opacity: 0;
+}
+.EmptyWishlist{
+    max-width: 100%;
+    height: calc(100% - 210px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    .container{
+        width: 100%;
+        display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    h1{
+        font-size: 40px;
+        @include xxs{
+            font-size: 30px;
+        }
+        @include xxs2{
+            font-size: 25px;
+        }
+    }
+    .icon{
+        font-size: 100px;
+        @include xxs{
+            font-size: 100px;
+        }
+    }
+    }
+}

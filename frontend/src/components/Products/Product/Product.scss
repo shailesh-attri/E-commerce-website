@@ -1,0 +1,92 @@
+@import '../../../css-config/mixins.scss';
+
+.product-container{
+    width: 100%;
+
+     border-radius: 20px;
+     display: grid;
+     
+    
+       
+     
+        .product{
+            cursor: pointer;
+        
+        border-radius: 20px;
+        border: 0.01px solid #d1d1d1;
+      
+       
+    
+
+        
+        .detail{
+           
+            width: 100%;
+            // border-left: 0.01px solid #d1d1d1;
+            // border-right: 0.01px solid #d1d1d1;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+            padding: 16px;
+            gap: 0;
+            h1{
+                font-size: 20px;
+            }
+            p{
+                text-wrap: '';
+            }
+        }
+        .productImg{
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            display: flex;
+            align-items: center;justify-content: center;
+           
+            background-color: transparent;
+            border-bottom: 0.01px solid #d1d1d1;
+            img{
+                mix-blend-mode: color-burn;
+                background-color: transparent;
+                
+                transition: all 0.2s ease;
+                border-top-right-radius: 20px;
+
+                // @include tablets{
+                 
+                //     width: 150px;
+                // }
+                // @include x560{
+                 
+                //     width: 120px;
+                // }
+                // @include x480{
+        
+                //     width: 100px;
+                //     }
+            }
+            img:hover{
+                transform: scale(1.1);
+                transition: all 0.2s ease;
+            }
+        }
+    }
+    .loading{
+        height: calc(100vh - 230px);
+    }
+    
+}
+.load-more-btn{
+    max-width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: white;
+    button{
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: rgb(8, 8, 19);
+    }
+}

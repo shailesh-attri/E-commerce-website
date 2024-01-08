@@ -1,0 +1,19 @@
+@import '../../../css-config/mixins.scss';
+
+.heroContainer{
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;justify-content: center;
+
+    .bannerContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        .DiscountBanner{
+            display: flex;align-items: center;justify-content: center;
+        }
+
+    }
+}
